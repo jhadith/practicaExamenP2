@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    color: #222;
+}
+
+.encabezado{
+    background: #1f4e79;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    position: sticky; /*   INVESTIGAR COMO SE USA*/
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;/*   INVESTIGAR COMO SE USA*/
+}
+
+.menu ul{
+    list-style: none; /*   INVESTIGAR COMO SE USA*/
+    display: flex;
+    gap:20px;
+}
+.menu a{
+    color: white;
+    text-decoration: none; /*   INVESTIGAR COMO SE USA*/
+    padding: 10px 20px;
+    display: block; /*   INVESTIGAR COMO SE USA el tipo de display*/
+    transition: backgroung 0.3s ease, transform 0.3s ease;
+
+}
+
+.menu a:hover{
+    background: #163a5b;
+    transform: scale(1.08);
+}
+
+.desplegable{
+    position: relative; /*   INVESTIGAR COMO SE USA*/
+
+}
+
+.submenu{
+    position: absolute;/*   INVESTIGAR COMO SE USA*/
+    top: 100%;/*   INVESTIGAR COMO SE USA*/
+    left: 0; /*   INVESTIGAR COMO SE USA*/
+    background: #163a5b;
+    min-width: 150px; /*   INVESTIGAR COMO SE USA*/
+    display: none !important;
+    flex-direction: column; /*   INVESTIGAR COMO SE USA*/
+    gap: 0 o !important;
+
+}
+.desplegable:hover .submenu{
+    display: flex !important;
+
+}
+
+.hero{
+    min-height: 400px;/*   INVESTIGAR COMO SE USA*/
+
+}
