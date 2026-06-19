@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+     
+}
+
+.encabezado {
+    background: #1f4e79;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: block;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.menu a:hover {
+    background: #163a5b;
+    transform: scale(1.08);
+}
+
+.desplegable {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #163a5b;
+    min-width: 150px;
+    display: none !important;
+    flex-direction: column;
+    gap: 0 !important;
+}
+
+.desplegable:hover .submenu {
+    display: flex !important;
+}
+
+.hero {
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 8%;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.texto-hero {
+    width: 50%;
+}
+
+.texto-hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.texto-hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.boton {
+    background: white;
+    color: #0072ff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.boton:hover {
+    transform: scale(1.15);
+    background: #eaf6ff;
+}
+
+.zona-animada {
+    width: 40%;
+    height: 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.figura {
+    width: 80px;
+    height: 80px;
+    background: #ffcc00;
+    border-radius: 20px;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    animation: giro 3s ease-in-out infinite;
+}
+
+@keyframes giro {
+    0% {
+        transform: rotate(0deg) scale(1);
+        background: #ffcc00;
+    }
+    50% {
+        transform: rotate(180deg) scale(1.3);
+        background: #ff0077;
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+        background: #ffcc00;
+    }
+}
+
+.caja3d {
+    width: 160px;
+    height: 120px;
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.caja3d:hover {
+    transform: rotateX(25deg) rotateY(25deg) scale(1.08);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.5);
+}
+
+.seccion-tarjetas,
+.seccion-3d {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.seccion-tarjetas h2,
+.seccion-3d h2 {
+    margin-bottom: 25px;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+.tarjeta h3 {
+    color: #1f4e79;
+    margin-bottom: 10px;
+}
+
+.tarjeta span {
+    display: inline-block;
+    margin-top: 15px;
+    background: #1f4e79;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 12px;
+}
+
+.destacada {
+    border-top: 6px solid #ff0077;
+}
+
+.flip-card {
+    width: 260px;
+    height: 170px;
+    perspective: 700px;
+    margin: auto;
+}
+
+.flip-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.flip-front {
+    background: #1f4e79;
+}
+
+.flip-back {
+    background: #ff0077;
+    transform: rotateY(180deg);
+}
+
+footer {
+    background: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 992px) {
+    .texto-hero {
+        width: 55%;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .encabezado {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .texto-hero,
+    .zona-animada {
+        width: 100%;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+}
+
+which city has the most cars 
+which place is the most fun in your town
