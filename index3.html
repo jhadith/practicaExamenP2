@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen CSS Puro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="encabezado">
+    <div class="logo">Academia Web</div>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li class="desplegable">
+                <a href="#">Cursos</a>
+                <ul class="submenu">
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Bootstrap</a></li>
+                </ul>
+            </li>
+            <li><a href="#tarjetas">Tarjetas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="texto-hero">
+            <h1>Diseño web para examen</h1>
+            <p>Practica menús, tarjetas, transformaciones, animaciones y responsividad.</p>
+            <button class="boton">Empezar</button>
+        </div>
+
+        <div class="zona-animada">
+            <div class="figura"></div>
+            <div class="caja3d">CSS 3D</div>
+        </div>
+    </section>
+
+    <section id="tarjetas" class="seccion-tarjetas">
+        <h2>Cursos disponibles</h2>
+
+        <div class="contenedor-tarjetas">
+            <article class="tarjeta">
+                <h3>HTML</h3>
+                <p>Estructura de páginas web.</p>
+                <span>Básico</span>
+            </article>
+
+            <article class="tarjeta destacada">
+                <h3>CSS</h3>
+                <p>Estilos, animaciones y diseño responsive.</p>
+                <span>Intermedio</span>
+            </article>
+
+            <article class="tarjeta">
+                <h3>Bootstrap</h3>
+                <p>Componentes rápidos y diseño adaptable.</p>
+                <span>Práctico</span>
+            </article>
+        </div>
+    </section>
+
+    <section class="seccion-3d">
+        <h2>Tarjeta 3D</h2>
+
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <h3>Frontend</h3>
+                    <p>Pasa el mouse</p>
+                </div>
+                <div class="flip-back">
+                    <h3>Examen</h3>
+                    <p>Transformación 3D</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="contacto">
+    <p>Práctica tipo examen - CSS puro</p>
+</footer>
+
+</body>
+</html>

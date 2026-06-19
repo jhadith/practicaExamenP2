@@ -1,145 +1,145 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: antiquewhite;
-    color: #222;
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+     
 }
 
-.encabezado{
+.encabezado {
     background: #1f4e79;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px 40px;
-    position: sticky; /*   INVESTIGAR COMO SE USA*/
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-.logo{
+.logo {
     font-size: 24px;
-    font-weight: bold;/*   INVESTIGAR COMO SE USA*/
+    font-weight: bold;
 }
 
-.menu ul{
-    list-style: none; /*   INVESTIGAR COMO SE USA*/
+.menu ul {
+    list-style: none;
     display: flex;
-    gap:20px;
+    gap: 20px;
 }
-.menu a{
+
+.menu a {
     color: white;
-    text-decoration: none; /*   INVESTIGAR COMO SE USA*/
-    padding: 10px 20px;
-    display: block; /*   INVESTIGAR COMO SE USA el tipo de display*/
-    transition: backgroung 0.3s ease, transform 0.3s ease;
-
+    text-decoration: none;
+    padding: 10px 12px;
+    display: block;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.menu a:hover{
+.menu a:hover {
     background: #163a5b;
     transform: scale(1.08);
 }
 
-.desplegable{
-    position: relative; /*   INVESTIGAR COMO SE USA*/
-
+.desplegable {
+    position: relative;
 }
 
-.submenu{
-    position: absolute;/*   INVESTIGAR COMO SE USA*/
-    top: 100%;/*   INVESTIGAR COMO SE USA*/
-    left: 0; /*   INVESTIGAR COMO SE USA*/
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
     background: #163a5b;
-    min-width: 150px; /*   INVESTIGAR COMO SE USA*/
+    min-width: 150px;
     display: none !important;
-    flex-direction: column; /*   INVESTIGAR COMO SE USA*/
-    gap: 0 o !important;
-
+    flex-direction: column;
+    gap: 0 !important;
 }
-.desplegable:hover .submenu{
+
+.desplegable:hover .submenu {
     display: flex !important;
-
 }
 
-.hero{
-    min-height: 400px;/*INVESTIGAR COMO SE USA*/
-    display:flex;
+.hero {
+    min-height: 400px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 60px 8%;
-    background: linear-gradient(45deg,#00c6ff, #0072ff ) ;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
     color: white;
-    position: relative; /*INVESTIGAR COMO SE USA*/
-    overflow: hidden;/*INVESTIGAR COMO SE USA*/
+    position: relative;
+    overflow: hidden;
 }
-.text-hero{
+
+.texto-hero {
     width: 50%;
 }
-.text-hero h1{
+
+.texto-hero h1 {
     font-size: 42px;
     margin-bottom: 15px;
-
 }
 
-.boton{
+.texto-hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.boton {
     background: white;
-    color: pink;
+    color: #0072ff;
     border: none;
     padding: 12px 25px;
     border-radius: 20px;
-    font-weight: bold;/*INVESTIGAR COMO SE USA*/
+    font-weight: bold;
     transition: transform 0.3s ease, background 0.3s ease;
 }
-.boton:hover{
+
+.boton:hover {
     transform: scale(1.15);
     background: #eaf6ff;
 }
 
-.zona-animada{
+.zona-animada {
     width: 40%;
     height: 250px;
-    position: relative;/*INVESTIGAR COMO SE USA*/
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.figura{
+.figura {
     width: 80px;
     height: 80px;
-    background:#ffcc00 ;
+    background: #ffcc00;
     border-radius: 20px;
-    position: absolute;/*INVESTIGAR COMO SE USA*/
+    position: absolute;
     top: 20px;
     right: 50px;
     animation: giro 3s ease-in-out infinite;
-
-
 }
 
-@keyframes giro{
-
-    0%{
+@keyframes giro {
+    0% {
         transform: rotate(0deg) scale(1);
-        background: #ffcc00 ;
+        background: #ffcc00;
     }
-    50%{
+    50% {
         transform: rotate(180deg) scale(1.3);
-
+        background: #ff0077;
     }
-    100%{
+    100% {
         transform: rotate(360deg) scale(1);
-        background: #ffcc00;;
+        background: #ffcc00;
     }
-
 }
-
-/*REVISAR*/
 
 .caja3d {
     width: 160px;
@@ -193,6 +193,7 @@ body{
     color: #1f4e79;
     margin-bottom: 10px;
 }
+
 .tarjeta span {
     display: inline-block;
     margin-top: 15px;
@@ -297,4 +298,3 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-
