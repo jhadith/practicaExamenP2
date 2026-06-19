@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+   box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+.contenedor{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.tarjeta{
+    background: pink;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media( max-width: 768px){
+    .contenedor{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+    }
+
+}
+@media( min-width: 769px) and (max-width:1024px){
+    .contenedor{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+}
+
+.contenedor2{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    position: relative;
+    perspective: 1000px;
+}
+
+.tarjeta2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frente{
+    background: orange;
+    transform: rotateY(0deg);
+
+}
+
+.atras{
+    background: orangered;
+    transform: rotateY(180deg);
+
+}
+.contenedor2:hover>.frente{
+    transform: rotateY(-180deg);
+}
+.contenedor2:hover>.atras{
+    transform: rotateY(0deg);
+}
+
+
+
+
+
+
+
+
+
+.contenedor3{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    perspective: 1000px ;
+}
+
+.tarjeta3{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition:0.5s cubic-bezier(0.2, 0.2, 0.2, 1);
+    display: flex;
+    
+    
+}
+.adelante3{
+    background: white;
+        transform: rotateY(0deg);
+}
+.atras3{
+    background: violet;
+    transform: rotateY(180deg);
+}
+
+
+
+.contenedor3:hover>.adelante3{
+    transform:rotateY(-180deg);
+}
+.contenedor3:hover>.atras3{
+    transform:rotateY(0deg);
+}
